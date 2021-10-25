@@ -15,7 +15,7 @@ Tested on the following boards: raspberry pi 1b, rasberry pi 4b raspberry pi zer
 
 ### Usage
 
-1. copy audio_status.sh to  /etc/AudioStatus/
+1. copy audio_status.sh to  /etc/AudioStatus/ and make it executable
 2. create service audio_status
 
     ```
