@@ -1,13 +1,14 @@
 #!/bin/bash
 #detecting audio playback
 
-#AUDIO_GPIO - GPIO pin number connected to relay
+#AUDIO_GPIO - GPIO pin connected to relay
 AUDIO_GPIO=7
+
 #TIMEOUT - inactivity time to switch the relay to OFF in seconds
 TIMEOUT=600
 #STEP - check frequency in seconds
 STEP=0.5
-#internal variables initialisation
+
 
 ### WiringPi version
 SWITCH_ON="gpio write ${AUDIO_GPIO} 1;"
@@ -17,6 +18,8 @@ SWITCH_OFF="gpio write ${AUDIO_GPIO} 0;"
 #SWITCH_ON="echo 1 > /sys/class/gpio/gpio${AUDIO_GPIO}/value"
 #SWITCH_OFF="echo 0 > /sys/class/gpio/gpio${AUDIO_GPIO}/value"
 
+
+#internal variables initialisation
 STATUS=0
 PREVIOUS_STATUS=0
 STATUS_CHANGE=0
