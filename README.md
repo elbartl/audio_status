@@ -1,11 +1,9 @@
 # audiostatus
-## Simple script to automatically detect raspberry pi soundcard playback status to power on/off audio gear
+## Simple script to automatically detect raspberry pi playback status to power on/off audio gear
 
-This is solution, I created couple years ago, to avoid switching on/off my amplifier each time audio playback is started and stopped on my network raspberri pi player. To do so script  checks `/proc/asound/card*/*p/*/status` for sound state. If `state: RUNNING` that means something is sending audio through sound card and audio gear needs to be powered on accordingly. Script activates relay connected through rasperry pi gpio port to allow audio to go through external gear. 
+Script created couple years ago, to avoid switching on and off amplifier each time audio playback is started or stopped on my network raspberri pi player. To do so script  checks `/proc/asound/card*/*p/*/status` for `state: RUNNING`. When detected (something is sending audio through sound card) audio gear needs to be powered on accordingly. Script activates relay connected through rasperry pi gpio port to allow audio to pass through external gear. 
 
-
-Tested on the following boards: raspberry pi 1b, rasberry pi 4b raspberry pi zero, bananapi m1, banana pi pro. It should work on others too
-I have used it on raspberry pi os (both 32bit and 64bit), bananian and armbian.
+Tested on the following boards: raspberry pi 1b, rasberry pi 4b raspberry pi zero, bananapi m1, banana pi pro. It should work on others too. I have used it on raspberry pi os (both 32bit and 64bit), bananian and armbian.
 
 ### Use case
 
